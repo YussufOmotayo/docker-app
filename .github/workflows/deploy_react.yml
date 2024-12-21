@@ -16,6 +16,7 @@ jobs:
       run: |
         docker build -t react-app .
   deploy:
+    runs-on: self-hosted
     needs: build  # Waits for build to finish
     steps:
     - name: Deploy
